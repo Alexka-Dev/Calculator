@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, rgb(241, 121, 121), #ffffff);
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(82, 79, 79);
+    background-color: rgba(234, 232, 232, 0.875);
+}
+
+#display {
+    color: black;
+    height: 70px;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+#equal {
+    height: 130px;
+}
+
+.button #clear {
+    background-color: rgb(36, 32, 32);
+    color: white;
+}
+
+.btn-number {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.btn-operator {
+    background-color: rgb(193, 6, 235);
+    color: #ffffff;
+}
+
+.btn-equal {
+    background-color: #fa0781;
+    color: #ffffff;
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 0rem;
+    right: 4.5rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 1;
+    
+}
+
+.theme-toggler ::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    transform: translate(50%, 50%);
+    border-radius: 50%;
+    background-color: rgb(165, 163, 163);
+    z-index: -1;
+}
+
+.theme-toggler .active {
+    color: rgba(11, 9, 9, 0.681);
+}
+
+.theme-toggler .active ::before {
+    background-color: rgb(255, 255, 255);
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border-radius: 25px;
+    border-color: rgba(179, 174, 174, 0.741);
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all(2s, ease);
+}
+
+button :hover {
+    transform: scale(.2);
+}
+
+/*dark theme*/
+
+.dark {
+    background-color: rgba(0, 0, 0, 0.885);
+}
+
+.dark #display {
+    color: #ffffff;
+    font-size: xx-large;
+}
+
+.dark #clear {
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+}
+
+.dark .btn-number {
+    background-color: #b7f854;
+}
+
+.dark .btn-operator {
+    background-color: #49fcac;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.dark .btn-equal {
+    background-color: #3bf208;
+}
+
